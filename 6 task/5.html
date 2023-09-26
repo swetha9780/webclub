@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const obj1 = { name: "Jack", age: 25 };
+        const obj2 = { age: 25, name: "Jack" };
+        let objEqual = false;
+        const obj1Keys = Object.keys(obj1).sort();
+        const obj2Keys = Object.keys(obj2).sort();
+        if (obj1Keys.length !== obj2Keys.length) {
+        console.log(objEqual);
+        } else {
+        const areEqual = obj1Keys.every((key, index) => {
+            const objValue1 = obj1[key];
+            const objValue2 = obj2[obj2Keys[index]];
+            return objValue1 === objValue2;
+        });
+        if (areEqual) {
+            objEqual = true;
+            console.log(objEqual);
+        } else {
+            console.log(objEqual);
+        }
+        }
+
+</script>
+</body>
+</html>
